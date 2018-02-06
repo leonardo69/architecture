@@ -16,17 +16,25 @@
     <script src="third_part/angular.min.js"></script>
     <script src="third_part/kendo.all.min.js"></script>
   
-    <script src="app/modules/test-module/test-module.js"></script>
-    <script src="app/modules/test-module/tlComboboxDirective.js"></script>
-    <script src="app/modules/test-module/components/test-module-component.js"></script>
+    <!-- Первый модуль -->
+    <script src="app/modules/first-module/first-module.js"></script>
+
+    <script src="app/modules/first-module/first-module.component.js"></script>
+    <script src="app/modules/first-module/first-module.dataservice.js"></script>
+    <script src="app/modules/first-module/first-module-combobox.directive.js"></script>
+ 
+    <!-- Второй модуль -->
+    <script src="app/modules/second-module/second-module.js"></script>
+    <script src="app/modules/second-module/second-module.component.js"></script>
+    <!-- Регистрация модулей в основном модуле -->
+    <script src="app/application.js"></script>
   
 
 </head>
-<body ng-app="app.testModule">
-    Test module for angular JS
-    {{1+1}}
+<body ng-app="app">
+    <div>Test module for angular JS  {{1+1}} </div>
         
-    <test-module-component></test-module-component>
-
+    <first-module-test ></first-module-test>
+    <second-module-test></second-module-test>
 </body>
 </html>

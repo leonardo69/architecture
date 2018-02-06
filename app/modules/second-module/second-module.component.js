@@ -1,12 +1,12 @@
 (function () {
     'use strict';
+    debugger;
     angular
-        .module ('app.testModule')
-        .component ('testModuleComponent', component());
+        .module ('app.secondModule')
+        .component ('secondModuleTest', component());
     function component() {
-        
-        //this component know bussiness logic 
-        //directives return values to this component
+      
+        debugger;
 
         function componentController(){
             var vm = this; 
@@ -20,8 +20,8 @@
         return {
             bindings: {},
             controller: componentController,
-            controllerAs: 'testComponent',
-            templateUrl:'./app/modules/test-module/templates/test-module-component.tmpl.html'
+            controllerAs: 'testComponent',           
+            template:'<div>Hello from secondModuleTest component </div>'
         };
     }
 
